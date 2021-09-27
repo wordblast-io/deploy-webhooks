@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "rootDir": "lib",
+        "outDir": "build",
+        "esModuleInterop": true,
+    }
+}
