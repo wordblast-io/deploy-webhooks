@@ -9,9 +9,10 @@ hooks()
         exec(
             `scripts/redeploy.sh ${process.env.REGISTRY_TOKEN}`,
             (err, stdout, stderr) => {
+                console.log('Executed scripts/redeploy.sh, printing logs...');
                 if (err !== null) console.error('error', err);
-                if (stdout !== undefined || stdout.length === 0) console.log('stdout', stdout);
-                if (stderr !== undefined || stderr.length === 0) console.log('stderr', stderr);
+                if (stdout !== undefined) console.log('stdout', stdout);
+                if (stderr !== undefined) console.log('stderr', stderr);
             })
         )
     .token(process.env.WEBHOOK_TOKEN)
